@@ -10,7 +10,7 @@ const ToDoList = () => {
       const todos = snapshot.val();
       const todoList = [];
       for (let id in todos) {
-        todoList.push(todos[id]);
+        todoList.push({ id, ...todos[id] });
       }
       setTodoList(todoList);
     });
@@ -20,9 +20,7 @@ const ToDoList = () => {
   return (
     <div>
       {todoList &&
-        todoList.map((todo, index) => (
-            <TodoItem todo={todo} key={index}/>
-        ))}
+        todoList.map((todo, index) => <TodoItem todo={todo} key={index} />)}
     </div>
   );
 };
