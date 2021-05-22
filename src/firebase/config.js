@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 const firebaseConfig = {
   apiKey: "AIzaSyCUSl9cnAKpgi2f-c4K04oogeQfkPo3-As",
   authDomain: "cs-todo-app-b04c3.firebaseapp.com",
@@ -7,3 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "261103000628",
   appId: "1:261103000628:web:eb51c01a98da20706abe61",
 };
+
+firebase.initializeApp(firebaseConfig);
+
+export default firebase;
