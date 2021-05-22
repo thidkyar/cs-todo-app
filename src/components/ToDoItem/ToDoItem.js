@@ -1,5 +1,6 @@
 import React from "react";
 import firebase from '../../firebase/config'
+import {Button} from 'react-bootstrap'
 import './ToDoItem.css'
 
 const ToDoItem = ({ todo }) => {
@@ -17,9 +18,8 @@ const ToDoItem = ({ todo }) => {
     }
   return (
     <div>
-      <h1 className={todo.complete && "complete"}>{todo.title}</h1>
-      <button onClick={deleteTodo}>Delete</button>
-      <button onClick={completeTodo}>Complete</button>
+      <p className={todo.complete ? "complete" : ""}>{todo.title}</p>
+      <input type="checkbox" onClick={completeTodo} defaultChecked={todo.complete}></input>
     </div>
   );
 };
