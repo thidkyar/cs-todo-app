@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Tabs, Tab } from "react-bootstrap";
-import { BsListTask } from 'react-icons/bs'
-import { BiCalendarCheck } from 'react-icons/bi'
+import { BsListTask } from "react-icons/bs";
+import { BiCalendarCheck } from "react-icons/bi";
 import ToDoList from "../../components/ToDoList/ToDoList";
 import ToDoListComplete from "../../components/ToDoListComplete/ToDoListComplete";
+import './TabView.css'
+
 function ControlledTabs({ todoList }) {
     const [key, setKey] = useState("home");
 
@@ -15,10 +17,10 @@ function ControlledTabs({ todoList }) {
             fill
             justify
         >
-            <Tab eventKey="home" title={<BsListTask/>}>
+            <Tab eventKey="home" title={<BsListTask />}>
                 <ToDoList todoList={todoList} />
             </Tab>
-            <Tab eventKey="complete" title={<BiCalendarCheck/>}>
+            <Tab eventKey="complete" title={<BiCalendarCheck />}>
                 <ToDoListComplete todoList={todoList} />
             </Tab>
         </Tabs>

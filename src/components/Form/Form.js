@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import firebase from "../../firebase/config";
+import './Form.css'
 
 const Form = () => {
   const [title, setTitle] = useState("");
@@ -19,7 +20,7 @@ const Form = () => {
   };
   
   return (
-    <div>
+    <div className="footer">
       <input type="text" onChange={handleOnChange} value={title} />
       <button onClick={createTodo}>Add Todo</button>
     </div>

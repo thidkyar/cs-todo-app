@@ -2,7 +2,7 @@ import React from "react";
 
 const ToDoListComplete = ({ todoList }) => {
     return (
-        <div>
+        <div className="container">
             {todoList &&
                 todoList.map((todo) =>
                     todo.complete ? <p>{todo.title}</p> : ""
