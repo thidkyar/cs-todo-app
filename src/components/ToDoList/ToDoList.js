@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-
+import './todolist.css'
 import TodoItem from "../ToDoItem/ToDoItem";
 const ToDoList = ({todoList}) => {
  console.log(todoList)
   return (
-    <div>
+    <div className = "todolist">
       {todoList &&
         todoList.map((todo, index) => <TodoItem todo={todo} key={index} />)}
     </div>
