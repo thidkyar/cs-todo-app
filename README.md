@@ -1,12 +1,11 @@
 # ToDo App (React+Redux+Firebase)
-
-![Alt text](https://github.com/thidkyar/cs-todo-app/blob/main/src/utils/screenshots/image1.png)
+<img src="https://github.com/thidkyar/cs-todo-app/blob/main/src/utils/screenshots/image1.png" height="300">
 
 ## Project Features
 
 * React.js front-end
 * Redux.js state management
-* Firebae Realtime database backend
+* Firebase Realtime database backend
 * Testing with Jest and Enzyme
 
 ## Installation
