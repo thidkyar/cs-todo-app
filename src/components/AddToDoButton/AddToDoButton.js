@@ -10,7 +10,7 @@ const AddToDoButton = () => {
 
     return (
         <>
-        <Button onClick={handleShow} className="add-todo" type="submit">
+        <Button onClick={handleShow} className="add-todo">
             <FaPlus className="add-icon"/>
         </Button>
         <Form show={show} setShow={setShow}/>
