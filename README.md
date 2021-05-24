@@ -1,6 +1,6 @@
 # ToDo App (React+Redux+Firebase)
 
-![Alt text](/screenshots/image1 "Optional Title")
+![Alt text](https://github.com/thidkyar/cs-todo-app/blob/main/src/utils/screenshots/image1.png)
 
 ## Project Features
 
