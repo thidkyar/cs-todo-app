@@ -37,7 +37,7 @@ const ToDoForm = ({show, setShow}) => {
             Close
           </Button>
           <Button variant="primary" onClick={createTodo}>
-            Save Changes
+            Add
           </Button>
         </Modal.Footer>
       </Modal>

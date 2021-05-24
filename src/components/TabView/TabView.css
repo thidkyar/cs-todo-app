@@ -1,7 +1,5 @@
 .nav-tabs {
     border-bottom: none;
-    /* background-color: rgb(250, 250, 250); */
-    /* display: flex; */
 }
 .nav-tabs .nav-link {
     color: rgb(224, 224, 224);

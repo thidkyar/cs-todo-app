@@ -3,13 +3,14 @@
     margin-top: 15vh;
     border: 0px solid #1c6ea4;
     border-radius: 10px !important;
-    -webkit-box-shadow: 0px 0px 12px -6px #000000;
-    box-shadow: 0px 0px 12px -6px #000000;
+    -webkit-box-shadow: 0px 5px 50px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 50px -6px rgba(0, 0, 0, 0.5);
     background-color: white;
     overflow: scroll;
     /* z-index: 2; */
     min-height: 500px;
     max-height: 500px;
+    color: rgb(124, 124, 124);
 }
 
 .App-child {
