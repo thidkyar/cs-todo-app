@@ -5,14 +5,14 @@ import "./ToDoItem.css";
 
 const ToDoItem = ({ todo }) => {
     const deleteTodo = (e) => {
-        const todoRef = firebase.database().ref("Todo").child(todo.id);
+        const todoRef = firebase.database().ref("Todo").child(todo.key);
         todoRef.remove();
     };
 
     const completeTodo = () => {
-        const todoRef = firebase.database().ref("Todo").child(todo.id);
+        const todoRef = firebase.database().ref("Todo").child(todo.key);
         todoRef.update({
-            complete: !todo.complete,
+            complete: !todo.value.complete,
         });
     };
     return (
@@ -21,9 +21,11 @@ const ToDoItem = ({ todo }) => {
                 className="checkbox"
                 type="checkbox"
                 onClick={completeTodo}
-                defaultChecked={todo.complete}
+                defaultChecked={todo.value.complete}
             ></input>
-            <label className={todo.complete ? "label-complete" : "label"}>{todo.title} </label>
+            <label className={todo.value.complete ? "label-complete" : "label"}>
+                {todo.value.title}{" "}
+            </label>
         </div>
     );
 };

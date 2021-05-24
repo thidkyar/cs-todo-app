@@ -1,12 +1,15 @@
 import React from "react";
+import TodoItem from "../ToDoItem/ToDoItem";
 
-const ToDoListComplete = ({ todoList }) => {
+const ToDoListComplete = ({ todos }) => {
     return (
         <div className="container">
-            {todoList &&
-                todoList.map((todo) =>
-                    todo.complete ? <p>{todo.title}</p> : ""
-                )}
+            {Object.keys(todos).map(
+                (key, id) =>
+                    todos[key].value.complete && (
+                        <TodoItem key={key} id={id} todo={todos[key]} />
+                    )
+            )}
         </div>
     );
 };
