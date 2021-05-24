@@ -1,30 +1,21 @@
-import React, { useState, useEffect } from "react";
-import firebase from "./firebase/config";
+import React, {useState} from "react";
 
 import "./App.css";
+import AddToDoButton from "./components/AddToDoButton/AddToDoButton";
 
-import Form from "./components/Form/Form";
 import TabView from "./components/TabView/TabView";
 
 function App() {
-  // const [todoList, setTodoList] = useState();
-  // useEffect(() => {
-  //   const todoRef = firebase.database().ref("Todo");
-  //   todoRef.on("value", (snapshot) => {
-  //     const todos = snapshot.val();
-  //     const todoList = [];
-  //     for (let id in todos) {
-  //       todoList.push({ id, ...todos[id] });
-  //     }
-  //     setTodoList(todoList);
-  //   });
-  // }, []);
-  return (
-    <div className="App">
-      <TabView />
-      <Form/>
-    </div>
-  );
+    return (
+        <div>
+            <div className="App">
+                <TabView />
+            </div>
+            <div className="App-child">
+                <AddToDoButton />
+            </div>
+        </div>
+    );
 }
 
 export default App;

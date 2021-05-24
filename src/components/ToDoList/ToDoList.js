@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./ToDoList.css";
 import TodoItem from "../ToDoItem/ToDoItem";
 const ToDoList = ({ todos }) => {

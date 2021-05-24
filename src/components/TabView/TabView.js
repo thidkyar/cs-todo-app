@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 
 import { useSelector } from "react-redux";
-import { useFirebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase'
+import { useFirebaseConnect, isLoaded, isEmpty } from "react-redux-firebase";
 
 import { Tabs, Tab } from "react-bootstrap";
 import { BsListTask } from "react-icons/bs";
 import { BiCalendarCheck } from "react-icons/bi";
 import ToDoList from "../../components/ToDoList/ToDoList";
-import ToDoListComplete from "../../components/ToDoListComplete/ToDoListComplete";
-import './TabView.css'
+import ToDoListComplete from "../ToDoList/ToDoListComplete";
+import "./TabView.css";
 
 function ControlledTabs() {
     const [key, setKey] = useState("home");
 
-    useFirebaseConnect([
-        "Todo", 
-    ]);
+    useFirebaseConnect(["Todo"]);
 
     const todos = useSelector((state) => state.firebase.ordered.Todo);
 
@@ -29,19 +27,19 @@ function ControlledTabs() {
 
     return (
         <Tabs
-        id="controlled-tab-example"
-        activeKey={key}
-        onSelect={(k) => setKey(k)}
-        fill
-        justify
-    >
-        <Tab eventKey="home" title={<BsListTask />}>
-            <ToDoList todos={todos}/>
-        </Tab>
-        <Tab eventKey="complete" title={<BiCalendarCheck />}>
-            <ToDoListComplete todos={todos}/>
-        </Tab>
-    </Tabs>
+            id="controlled-tab-example"
+            activeKey={key}
+            onSelect={(k) => setKey(k)}
+            fill
+            justify
+        >
+            <Tab eventKey="home" title={<BsListTask />}>
+                <ToDoList todos={todos} />
+            </Tab>
+            <Tab eventKey="complete" title={<BiCalendarCheck />}>
+                <ToDoListComplete todos={todos} />
+            </Tab>
+        </Tabs>
     );
 }
 
