@@ -3,7 +3,7 @@
     width: 4em;
     height: 4em;
     color: #fff;
-    background-color: rgb(221, 169, 114);
+    background-color: rgb(245, 188, 127);
     background-color: cutom-color;
     border-color: #2e4c80;
     border-color: cutom-cor;
@@ -11,7 +11,7 @@
 }
 
 .add-icon {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .add-todo:hover {
