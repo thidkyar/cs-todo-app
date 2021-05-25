@@ -6,6 +6,8 @@ import Form from "../Form/Form";
 import './AddToDoButton.css'
 const AddToDoButton = () => {
   const [show, setShow] = useState(false);
+
+  //handle display of form modal
   const handleShow = () => setShow(true);
 
     return (

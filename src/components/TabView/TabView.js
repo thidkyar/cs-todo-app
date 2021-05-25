@@ -17,10 +17,12 @@ function ControlledTabs() {
 
     const todos = useSelector((state) => state.firebase.ordered.Todo);
 
+    //if todos is not loaded (useEffect variant) - display loading message 
     if (!isLoaded(todos)) {
         return <div>Loading...</div>;
     }
 
+    //if todos list is empty - display empty list message
     if (isEmpty(todos)) {
         return <div>Todos List Is Empty</div>;
     }

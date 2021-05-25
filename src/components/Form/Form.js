@@ -9,10 +9,12 @@ const ToDoForm = ({ show, setShow }) => {
 
     const handleClose = () => setShow(false);
 
+    //update task state with modal input 
     const handleOnChange = (e) => {
         setTitle(e.target.value);
     };
 
+    //create and add item to firebase database
     const createTodo = () => {
         const todoRef = firebase.database().ref("Todo");
         const todo = {

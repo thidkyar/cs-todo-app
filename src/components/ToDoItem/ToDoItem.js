@@ -5,11 +5,14 @@ import { TiDeleteOutline } from "react-icons/ti";
 import "./ToDoItem.css";
 
 const ToDoItem = ({ todo, complete }) => {
+
+    //remove to do item from database
     const deleteTodo = (e) => {
         const todoRef = firebase.database().ref("Todo").child(todo.key);
         todoRef.remove();
     };
 
+    //update database status to complete or incomplete based on checkbox 
     const completeTodo = (e) => {
         const todoRef = firebase.database().ref("Todo").child(todo.key);
         todoRef.update({
